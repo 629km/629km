@@ -1,0 +1,248 @@
+:root {
+  --bg: #fff;
+  --ink: #141519;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --brand: #6b4bff;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR",
+    sans-serif;
+}
+a {
+  color: var(--ink);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--brand);
+}
+.wrap {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+@media (max-width: 960px) {
+  .wrap {
+    grid-template-columns: 1fr;
+  }
+}
+.sidebar {
+  border-right: 1px solid var(--line);
+  padding: 28px 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+.side-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.brand {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.name {
+  font-weight: 700;
+  font-size: 18px;
+}
+.role {
+  color: var(--muted);
+  font-size: 13px;
+}
+nav.primary {
+  margin: 26px 0;
+}
+nav.primary a {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+nav.primary a.active,
+nav.primary a:hover {
+  background: #f4f5f7;
+}
+.contact {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+main {
+  padding: 40px 5vw;
+}
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 0;
+}
+h1 {
+  font-size: 38px;
+  margin: 0 0 10px;
+}
+.muted {
+  color: var(--muted);
+}
+
+.hero {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 14px 0;
+}
+.hero img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 20px 0;
+}
+@media (max-width: 960px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+.dl {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.kpi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 18px 0;
+}
+.kpi .box {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+}
+.kpi .box .num {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 12px 0;
+}
+@media (max-width: 960px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.btn {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background: #fff;
+}
+.btn:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.back {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--muted);
+}
+footer {
+  border-top: 1px solid var(--line);
+  margin-top: 40px;
+  padding: 20px 0;
+  color: var(--muted);
+}
+/* Hero 공통이 있다면 그대로 쓰고, 비디오 전용만 추가 */
+.hero-video {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 14px;
+}
+.hero-video .hero-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video .hero-media {
+    animation: none;
+  }
+}
+
+.hero-video .hero-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 동작 줄임 모드 사용자 배려 */
+@media (prefers-reduced-motion: reduce) {
+  .hero-video .hero-media {
+    animation: none;
+  }
+}
+
+.hero-video .hero-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video .hero-media {
+    animation: none;
+  }
+}
